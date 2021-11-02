@@ -27,9 +27,13 @@ class _mainHomeState extends State<mainHome>
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
-        child: Icon(Icons.mail),
-      ),
+          onPressed: () {
+            print(_controller.index);
+          },
+          backgroundColor: Colors.green,
+          child: _controller.index == 1
+              ? Icon(Icons.mail)
+              : Icon(Icons.settings_outlined)),
       appBar: AppBar(
         actions: [
           Container(
@@ -39,40 +43,41 @@ class _mainHomeState extends State<mainHome>
                   IconButton(onPressed: () {}, icon: Icon(Icons.search)),
                   PopupMenuButton(
                       onSelected: (result) {
-                        setState((){
-                          if(result == 5){
+                        setState(() {
+                          if (result == 5) {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        mainSettings()));}});},
-                      itemBuilder: (context) =>
-                      [
-                        PopupMenuItem(
-                          child: Text("New Group"),
-                          value: 1,
-                          onTap: (){},
-                        ),
-                        PopupMenuItem(
-                          child: Text("New Select Message"),
-                          value: 2,
-                          onTap: (){},
-                        ),
-                        PopupMenuItem(
-                          child: Text("Connection"),
-                          value: 3,
-                          onTap: (){},
-                        ),
-                        PopupMenuItem(
-                          child: Text("Star Messages"),
-                          value: 4,
-                          onTap: (){},
-                        ),
-                        PopupMenuItem(
-                          child: Text("Settings"),
-                          value: 5,
-                        )
-                      ])
+                                    builder: (context) => mainSettings()));
+                          }
+                        });
+                      },
+                      itemBuilder: (context) => [
+                            PopupMenuItem(
+                              child: Text("New Group"),
+                              value: 1,
+                              onTap: () {},
+                            ),
+                            PopupMenuItem(
+                              child: Text("New Select Message"),
+                              value: 2,
+                              onTap: () {},
+                            ),
+                            PopupMenuItem(
+                              child: Text("Connection"),
+                              value: 3,
+                              onTap: () {},
+                            ),
+                            PopupMenuItem(
+                              child: Text("Star Messages"),
+                              value: 4,
+                              onTap: () {},
+                            ),
+                            PopupMenuItem(
+                              child: Text("Settings"),
+                              value: 5,
+                            )
+                          ])
                 ],
               )),
         ],

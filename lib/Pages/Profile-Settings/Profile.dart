@@ -33,16 +33,22 @@ class _mainProfileState extends State<mainProfile> {
                   Positioned(
                     right: 0,
                     bottom: 0,
-                    child: Container(
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(20)),
-                      ),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(),
-                        onPressed: () {},
-                        child: Icon(Icons.photo,size: 20,),
+                    child: InkWell(
+                      borderRadius: BorderRadius.all(Radius.circular(50)),
+                      onTap: () {
+                        print("add a photo");
+                      },
+                      child: Container(
+                        width: 55,
+                        height: 55,
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.all(Radius.circular(50)),
+                        ),
+                        child: Icon(
+                          Icons.add_a_photo,
+                          size: 30,
+                        ),
                       ),
                     ),
                   ),
@@ -52,39 +58,42 @@ class _mainProfileState extends State<mainProfile> {
             SizedBox(
               height: 20,
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.grey),
-              onPressed: () {},
-              child: Container(
-                margin: EdgeInsets.only(left: 10),
-                child: ListTile(
-                  title: Text("Hesap"),
-                  subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
-                  leading: Icon(Icons.details),
+            Material(
+              child: InkWell(
+                onTap: () {},
+                child: Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: ListTile(
+                    title: Text("Bildirimler"),
+                    subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
+                    leading: Icon(Icons.details),
+                  ),
                 ),
               ),
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.grey),
-              onPressed: () {},
-              child: Container(
-                margin: EdgeInsets.only(left: 10),
-                child: ListTile(
-                  title: Text("Hesap"),
-                  subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
-                  leading: Icon(Icons.details),
+            Material(
+              child: InkWell(
+                onTap: () {},
+                child: Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: ListTile(
+                    title: Text("Bildirimler"),
+                    subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
+                    leading: Icon(Icons.details),
+                  ),
                 ),
               ),
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.grey),
-              onPressed: () {},
-              child: Container(
-                margin: EdgeInsets.only(left: 10),
-                child: ListTile(
-                  title: Text("Hesap"),
-                  subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
-                  leading: Icon(Icons.call),
+            Material(
+              child: InkWell(
+                onTap: () {},
+                child: Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: ListTile(
+                    title: Text("Bildirimler"),
+                    subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
+                    leading: Icon(Icons.details),
+                  ),
                 ),
               ),
             ),

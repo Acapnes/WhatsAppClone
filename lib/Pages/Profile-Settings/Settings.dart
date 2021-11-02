@@ -21,108 +21,105 @@ class _mainSettingsState extends State<mainSettings> {
         color: Colors.white,
         child: Column(
           children: [
-            RaisedButton(
-              color: Colors.grey,
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            mainProfile()));
-              },
-              child: ListTile(
-                  title: Text(characters[0].name),
-                  subtitle: Text(characters[0].description),
-                  leading: IconButton(
-                    icon: CircleAvatar(
-                      backgroundImage: AssetImage("assets/logo.png"),
+            Material(
+              child: InkWell(
+                onTap: (){},
+                child: ListTile(
+                    title: Text(characters[0].name),
+                    subtitle: Text(characters[0].description),
+                    leading: IconButton(
+                      icon: CircleAvatar(
+                        backgroundImage: AssetImage("assets/logo.png"),
+                      ),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => mainProfile()));
+                      },
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  mainProfile()));
-                    },
+                    trailing: IconButton(
+                      icon: Icon(Icons.qr_code),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => mainQR()));
+                      },
+                    )),
+              ),
+            ),
+             Material(
+               child: InkWell(
+                 onTap: (){},
+                 child: Container(
+                    margin: EdgeInsets.only(left: 10),
+                    child: ListTile(
+                      title: Text("Hesap"),
+                      subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
+                      leading: Icon(Icons.details),
+                    ),
                   ),
-                  trailing: IconButton(icon : Icon(Icons.qr_code),onPressed: (){
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                mainQR()));
-                  },)),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.grey),
-              onPressed: () {},
-              child: Container(
-                margin: EdgeInsets.only(left: 10),
-                child: ListTile(
-                  title: Text("Hesap"),
-                  subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
-                  leading: Icon(Icons.details),
+               ),
+             ),
+            Material(
+              child: InkWell(
+                onTap: (){},
+                child: Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: ListTile(
+                    title: Text("Sohbetler"),
+                    subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
+                    leading: Icon(Icons.details),
+                  ),
                 ),
               ),
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.grey),
-              onPressed: () {},
-              child: Container(
-                margin: EdgeInsets.only(left: 10),
-                child: ListTile(
-                  title: Text("Sohbetler"),
-                  subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
-                  leading: Icon(Icons.details),
+            Material(
+              child: InkWell(
+                onTap: (){},
+                child: Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: ListTile(
+                    title: Text("Bildirimler"),
+                    subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
+                    leading: Icon(Icons.details),
+                  ),
                 ),
               ),
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.grey),
-              onPressed: () {},
-              child: Container(
-                margin: EdgeInsets.only(left: 10),
-                child: ListTile(
-                  title: Text("Bildirimler"),
-                  subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
-                  leading: Icon(Icons.details),
+            Material(
+              child: InkWell(
+                onTap: (){},
+                child: Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: ListTile(
+                    title: Text("Depolama ve veriler"),
+                    subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
+                    leading: Icon(Icons.details),
+                  ),
                 ),
               ),
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.grey),
-              onPressed: () {},
-              child: Container(
-                margin: EdgeInsets.only(left: 10),
-                child: ListTile(
-                  title: Text("Depolama ve veriler"),
-                  subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
-                  leading: Icon(Icons.details),
+            Material(
+              child: InkWell(
+                onTap: (){},
+                child: Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: ListTile(
+                    title: Text("Yardım"),
+                    subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
+                    leading: Icon(Icons.details),
+                  ),
                 ),
               ),
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.grey),
-              onPressed: () {},
-              child: Container(
-                margin: EdgeInsets.only(left: 10),
-                child: ListTile(
-                  title: Text("Yardım"),
-                  subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
-                  leading: Icon(Icons.details),
-                ),
-              ),
-            ),
-
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.grey),
-              onPressed: () {},
-              child: Container(
-                margin: EdgeInsets.only(left: 10),
-                child: ListTile(
-                  title: Text("Arkadaş davet edin"),
-                  subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
-                  leading: Icon(Icons.details),
+            Material(
+              child: InkWell(
+                onTap: (){},
+                child: Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: ListTile(
+                    title: Text("Arkadaş davet edin"),
+                    subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
+                    leading: Icon(Icons.details),
+                  ),
                 ),
               ),
             ),

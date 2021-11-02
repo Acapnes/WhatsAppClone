@@ -27,9 +27,9 @@ class MyApp extends StatelessWidget {
       future: Init.instance.initialize(),
       builder: (context, AsyncSnapshot snapshot) {
         if (globals.phoneNumber != "0000") {
-          return MaterialApp(home: mainHome());
-        } else {
           return MaterialApp(home: mainLanding());
+        } else {
+          return MaterialApp(home: mainHome());
         }
       },
     );
