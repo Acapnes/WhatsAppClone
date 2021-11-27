@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/Models/charactersModel.dart';
-import 'package:whatsapp_clone/Pages/Profile-Settings/Profile.dart';
+import 'package:whatsapp_clone/Models/CharactersModel.dart';
+import 'package:whatsapp_clone/Pages/Profile-Settings/MyProfile.dart';
 import 'package:whatsapp_clone/Pages/QrCode/QR.dart';
 
 class mainSettings extends StatefulWidget {
@@ -33,7 +33,7 @@ class _mainSettingsState extends State<mainSettings> {
                       ),
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => mainProfile()));
+                            MaterialPageRoute(builder: (context) => mainMyProfile()));
                       },
                     ),
                     trailing: IconButton(

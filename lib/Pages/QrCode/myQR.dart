@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/Models/charactersModel.dart';
+import 'package:whatsapp_clone/Models/CharactersModel.dart';
 
 class mainmyQR extends StatelessWidget {
   @override

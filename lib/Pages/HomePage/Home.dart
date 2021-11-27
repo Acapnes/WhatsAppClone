@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/Models/charactersModel.dart';
 import 'package:whatsapp_clone/Pages/HomePage/Calls.dart';
 import 'package:whatsapp_clone/Pages/HomePage/Camera.dart';
-import 'package:whatsapp_clone/Pages/HomePage/Chats.dart';
+import 'package:whatsapp_clone/Pages/HomePage/Chats/Chats.dart';
 import 'package:whatsapp_clone/Pages/HomePage/Status.dart';
 import 'package:whatsapp_clone/Pages/Profile-Settings/Settings.dart';
+import 'package:whatsapp_clone/globals.dart';
 
 class mainHome extends StatefulWidget {
   const mainHome({Key key}) : super(key: key);
@@ -15,12 +15,19 @@ class mainHome extends StatefulWidget {
 
 class _mainHomeState extends State<mainHome>
     with SingleTickerProviderStateMixin {
+  double _appBarTop = 0.0;
   TabController _controller;
+  final int _cameraTapIndex = 0;
 
   @override
   void initState() {
     super.initState();
+
     _controller = TabController(length: 4, vsync: this, initialIndex: 1);
+  }
+
+  @override
+  void dispose() {
   }
 
   @override
@@ -102,9 +109,12 @@ class _mainHomeState extends State<mainHome>
           ],
         ),
       ),
-      body: TabBarView(
-          controller: _controller,
-          children: [mainCamera(), mainChats(), mainStatus(), mainCalls()]),
+      body: TabBarView(controller: _controller, children: [
+        mainCamera(),
+        mainChats(),
+        mainStatus(),
+        mainCalls()
+      ]),
     );
   }
 }

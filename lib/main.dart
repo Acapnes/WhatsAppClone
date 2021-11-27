@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/Pages/HomePage/Camera.dart';
 import 'package:whatsapp_clone/Pages/HomePage/Home.dart';
 import 'package:whatsapp_clone/Pages/Landing.dart';
-import 'package:whatsapp_clone/Pages/Login.dart';
 import 'Other/Globals.dart' as globals;
+import 'package:camera/camera.dart';
 
 ///
 
@@ -16,7 +17,11 @@ class Init {
   }
 }
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  cameras = await availableCameras();
+
   runApp(MyApp());
 }
 

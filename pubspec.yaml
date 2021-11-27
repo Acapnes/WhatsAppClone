@@ -41,7 +41,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   shared_preferences: ^2.0.8
-  country_picker: ^2.0.8
+  country_picker:
+  image_picker:
+  camera: ^0.9.4+5
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -62,6 +64,10 @@ flutter:
 
   assets:
    - assets/logo.png
+   - assets/background.png
+   - assets/profile-1.png
+   - assets/profile-2.png
+   - assets/profile-3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
