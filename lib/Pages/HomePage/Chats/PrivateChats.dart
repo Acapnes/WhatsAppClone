@@ -4,6 +4,7 @@ import 'package:whatsapp_clone/CustomUI/ChatList/theirChatList.dart';
 import 'package:whatsapp_clone/Models/CharactersModel.dart';
 import 'package:whatsapp_clone/Models/ChatModel.dart';
 import 'package:whatsapp_clone/Pages/Profile-Settings/TheirProfile.dart';
+import 'package:whatsapp_clone/globals.dart';
 
 class mainPChats extends StatefulWidget {
   privateModel character;
@@ -14,6 +15,20 @@ class mainPChats extends StatefulWidget {
 
 class _mainPChatsState extends State<mainPChats> {
   bool isShowing = false;
+  bool isPhoto = false;
+  TextEditingController messageController = TextEditingController();
+  ScrollController _scrollController = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    
+  }
+  
+  toBot(){
+    _scrollController.animateTo(_scrollController.position.maxScrollExtent+56,
+        duration: Duration(milliseconds: 250), curve: Curves.easeInOut);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +100,9 @@ class _mainPChatsState extends State<mainPChats> {
             children: [
               Expanded(
                 child: ListView.builder(
+                  controller: _scrollController,
                   itemCount: chats.length,
+                  physics: BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
                     return chats[index].me
                         ? mainMyChatList(
@@ -117,6 +134,7 @@ class _mainPChatsState extends State<mainPChats> {
                                 borderRadius: BorderRadius.circular(25),
                               ),
                               child: TextFormField(
+                                controller: messageController,
                                 textAlignVertical: TextAlignVertical.center,
                                 keyboardType: TextInputType.multiline,
                                 maxLines: 5,
@@ -126,27 +144,30 @@ class _mainPChatsState extends State<mainPChats> {
                                   hintText: "Type a message",
                                   hintStyle: TextStyle(color: Colors.grey),
                                   prefixIcon: IconButton(
-                                    icon: Icon(
-                                      isShowing
-                                          ? Icons.keyboard
-                                          : Icons.emoji_emotions_outlined,
-                                    ),
-                                    onPressed: () {
-                                      setState(() {
-                                        isShowing = !isShowing;
-                                      });
-                                    },
-                                  ),
-                                  suffixIcon: Icon(
+                                  icon: Icon(
                                     isShowing
                                         ? Icons.keyboard
-                                        : Icons.camera_alt,
+                                        : Icons.emoji_emotions_outlined,
                                   ),
+                                  onPressed: () {
+                                    setState(() {
+                                      isShowing = !isShowing;
+                                    });
+                                  },
+                                ),
+                                suffixIcon: IconButton(
+                                  icon: Icon(
+                                    Icons.camera_alt,
+                                  ),
+                                  onPressed: () {
+                                    getImage();
+                                  },
                                 ),
                               ),
                             ),
                           ),
-                          Container(
+                        ),
+                        Container(
                             decoration: BoxDecoration(
                               color: Colors.greenAccent,
                               borderRadius: BorderRadius.all(Radius.circular(30))
@@ -154,7 +175,12 @@ class _mainPChatsState extends State<mainPChats> {
                             margin: EdgeInsets.only(bottom: 10),
                             child: IconButton(
                               icon: Icon(Icons.send,color: Colors.white,),
-                              onPressed: (){},
+                              onPressed: (){
+                                setState(() {
+                                  chats.add(chatModel(me:true,message:messageController.text));
+                                });
+                                toBot();
+                              },
                             ),
                           )
                         ],
