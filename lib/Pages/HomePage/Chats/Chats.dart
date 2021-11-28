@@ -16,6 +16,41 @@ class _mainChatsState extends State<mainChats> {
     super.initState();
   }
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        child: ListView.builder(
+          itemCount: characters.length,
+          itemBuilder: (context, i){
+            return Material(
+              child: InkWell(
+                onTap: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              mainPChats(characters[i])));
+                },
+                child: Container(
+                  child: ListTile(
+                      title: Text(characters[i].name),
+                      subtitle: Text(characters[i].currentMsg),
+                      leading: IconButton(
+                        icon: CircleAvatar(
+                          backgroundImage: AssetImage("assets/logo.png"),),
+                        onPressed: (){
+                          _showAlertDialogAvatar(i);
+                      },),
+                      trailing: Text(characters[i].time),
+                    ),
+                ),
+              ),
+            );
+        }),
+        ),
+      );
+  }
   _showAlertDialogAvatar(int index) {
     showDialog(
         context: context,
@@ -37,12 +72,12 @@ class _mainChatsState extends State<mainChats> {
                       width: MediaQuery.of(context).size.width,
                       height: 50,
                       color: Colors.grey.withOpacity(0.3),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 8.0,top: 12),
-                          child: Text(characters[index].name,style: TextStyle(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 8.0,top: 12),
+                        child: Text(characters[index].name,style: TextStyle(
                             color: Colors.black.withOpacity(0.6)
-                          ),),
-                        ),
+                        ),),
+                      ),
                     ),
                   ),
                 ],
@@ -50,11 +85,11 @@ class _mainChatsState extends State<mainChats> {
             ),
             actions: <Widget>[
               IconButton(
-                padding: EdgeInsets.zero,
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(Icons.call)
+                  padding: EdgeInsets.zero,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(Icons.call)
               ),
               IconButton(
                   padding: EdgeInsets.zero,
@@ -84,41 +119,5 @@ class _mainChatsState extends State<mainChats> {
             ],
           );
         });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: ListView.builder(
-          itemCount: characters.length,
-          itemBuilder: (context, i){
-            return Container(
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(primary: Colors.white),
-                onPressed: (){
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              mainPChats(characters[i])));
-                },
-                onLongPress: (){},
-                child: ListTile(
-                  title: Text(characters[i].name),
-                  subtitle: Text(characters[i].currentMsg),
-                  leading: IconButton(
-                    icon: CircleAvatar(
-                      backgroundImage: AssetImage("assets/logo.png"),),
-                    onPressed: (){
-                      _showAlertDialogAvatar(i);
-                  },),
-                  trailing: Text(characters[i].time),
-                ),
-              ),
-            );
-        }),
-        ),
-      );
   }
 }
