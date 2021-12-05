@@ -35,7 +35,7 @@ class _mainChatsState extends State<mainChats> {
                 child: Container(
                   child: ListTile(
                       title: Text(characters[i].name),
-                      subtitle: Text(characters[i].currentMsg),
+                    subtitle: subTitle(i),
                       leading: IconButton(
                         icon: CircleAvatar(
                           backgroundImage: AssetImage("assets/logo.png"),),
@@ -119,5 +119,106 @@ class _mainChatsState extends State<mainChats> {
             ],
           );
         });
+  }
+
+  /*Container(
+  child: characters[index].photo == true
+  ? Row(
+  children: [
+  Icon(
+  Icons.photo,
+  size: 15,
+  ),
+  SizedBox(width: 5,),
+  Text("Fotoğraf")
+  ],
+  )
+      : Text(characters[index].currentMsg),
+  );*/
+  Widget subTitle(int index){
+    /// 0 = text , 1 = video , 2 = photo
+    /// 0 = not taken not seen , 1 == taken not seen , 2 == taken and seen
+    switch(characters[index].type){
+      case "0":
+        switch(characters[index].status){
+          case "0":
+            return Row(
+              children: [
+                Icon(Icons.error_outline,size: 16,color: Colors.red,),
+                SizedBox(width: 3),
+                Text("Mesaj yüklenemedi",style: TextStyle(color: Colors.redAccent),),
+              ],
+            );
+            break;
+          case "1":
+            return Row(
+              children: [
+                Icon(Icons.done,size: 16,),
+                SizedBox(width: 3),
+                Text(characters[index].currentMsg),
+              ],
+            );
+            break;
+          case "2":
+            return Row(
+              children: [
+                Icon(Icons.done_all,size: 16,color: Colors.blue,),
+                SizedBox(width: 3),
+                Text(characters[index].currentMsg),
+              ],
+            );
+            break;
+        };
+        break;
+      case "0":
+        switch(characters[index].status){
+          case "0":
+            return Row(
+              children: [
+                Icon(Icons.error_outline,size: 16,color: Colors.red,),
+                SizedBox(width: 3),
+                Text(characters[index].currentMsg),
+              ],
+            );
+            break;
+          case "1":
+            return Row(
+              children: [
+                Icon(Icons.done,size: 16,),
+                SizedBox(width: 3),
+                Text(characters[index].currentMsg),
+              ],
+            );
+            break;
+          case "2":
+            return Row(
+              children: [
+                Icon(Icons.done_all,size: 16,color: Colors.blue,),
+                SizedBox(width: 3),
+                Text(characters[index].currentMsg),
+              ],
+            );
+            break;
+        };
+        break;
+      case "1":
+        return Row(
+          children: [
+            Icon(Icons.video_camera_back,size: 16,),
+            SizedBox(width: 3),
+            Text("Video"),
+          ],
+        );
+        break;
+      case "2":
+        return Row(
+          children: [
+            Icon(Icons.photo_album,size: 16,),
+            SizedBox(width: 3),
+            Text("Fotoğraf"),
+          ],
+        );
+        break;
+    }
   }
 }

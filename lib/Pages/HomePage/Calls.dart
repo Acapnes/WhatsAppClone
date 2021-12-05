@@ -10,7 +10,6 @@ class _mainCallsState extends State<mainCalls> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black54,
       child: ListView.builder(
         itemCount: 5,
         itemBuilder: (context,index){

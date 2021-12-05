@@ -6,23 +6,107 @@ class privateModel {
   String description;
   String ourImagesPath;
 
-  privateModel({this.currentMsg, this.id, this.name, this.time,this.description,this.ourImagesPath});
+  String type; /// 0 = text , 1 = video , 2 = photo
+  String status; /// 0 = not taken not seen , 1 == taken not seen , 2 == taken and seen
+
+  privateModel(
+      {this.currentMsg, this.id, this.name, this.time,
+        this.description,this.ourImagesPath,this.status,this.type});
 }
 
 
 
 List<privateModel> characters = [
-  privateModel(name : "Alper",time:"12.22",id:1,currentMsg: "Selam",description:"a",ourImagesPath: "assets/profile-1.png"), /// Account
+  privateModel(
+      name: "Alper",
+      time: "12.22",
+      id: 1,
+      currentMsg: "Selam",
+      description: "a",
+      ourImagesPath: "assets/profile-1.png"), /// Account
 
-  privateModel(name : "Ali",time:"12.22",id:2,currentMsg: "Selam",description:"a",ourImagesPath: "assets/profile-2.png"),
-  privateModel(name : "Hamza",time:"12.22",id:3,currentMsg: "Selam",description:"a",ourImagesPath: "assets/profile-2.png"),
-  privateModel(name : "Mert",time:"12.22",id:4,currentMsg: "Selam",description:"a",ourImagesPath: "assets/profile-2.png"),
-  privateModel(name : "Ahmet",time:"12.22",id:5,currentMsg: "Selam",description:"a",ourImagesPath: "assets/profile-3.png"),
-  privateModel(name : "Aslan",time:"12.22",id:6,currentMsg: "Selam",description:"a",ourImagesPath: "assets/profile-3.png"),
-  privateModel(name : "Fatih",time:"12.22",id:7,currentMsg: "Selam",description:"a",ourImagesPath: "assets/profile-3.png"),
-  privateModel(name : "Fuat",time:"12.22",id:8,currentMsg: "Selam ben Fuat",description:"a",ourImagesPath: "assets/profile-1.png"),
-  privateModel(name : "Ayşe",time:"12.22",id:9,currentMsg: "Selam",description:"a",ourImagesPath: "assets/profile-2.png"),
-  privateModel(name : "Emine",time:"12.22",id:10,currentMsg: "Selam",description:"a",ourImagesPath: "assets/profile-3.png"),
+  privateModel(
+      name: "Ali",
+      time: "14:20",
+      id: 2,
+      type: "0",
+      status: "0",
+      currentMsg: "Hello",
+      description: "My name is Ali",
+      ourImagesPath: "assets/profile-2.png"),
+  privateModel(
+      name: "Hamza",
+      time: "10:10",
+      id: 3,
+      type: "1",
+      status: "0",
+      currentMsg: "Son olarak bunu yazdım",
+      description: "a",
+
+      ourImagesPath: "assets/profile-2.png"),
+  privateModel(
+      name: "Mert",
+      time: "Dün",
+      id: 4,
+      type: "2",
+      status: "1",
+      currentMsg: "Selam",
+      description: "a",
+      ourImagesPath: "assets/profile-2.png"),
+  privateModel(
+      name: "Ahmet",
+      time: "Dün",
+      id: 5,
+      type: "0",
+      status: "1",
+      currentMsg: "Selam",
+      description: "a",
+      ourImagesPath: "assets/profile-3.png"),
+  privateModel(
+      name: "Aslan",
+      time: "Dün",
+      id: 6,
+      type: "0",
+      status: "2",
+      currentMsg: "Selam",
+      description: "a",
+      ourImagesPath: "assets/profile-3.png"),
+  privateModel(
+      name: "Fatih",
+      time: "Dün",
+      id: 7,
+      type: "0",
+      status: "0",
+      currentMsg: "Selam",
+      description: "a",
+      ourImagesPath: "assets/profile-3.png"),
+  privateModel(
+      name: "Fuat",
+      time: "20.11.2021",
+      id: 8,
+      type: "1",
+      status: "1",
+      currentMsg: "Selam ben Fuat",
+      description: "a",
+      ourImagesPath: "assets/profile-1.png"),
+  privateModel(
+      name: "Ayşe",
+      time: "21.11.2021",
+      id: 9,
+      type: "2",
+      status: "2",
+      currentMsg: "Selam",
+      description: "a",
+      ourImagesPath: "assets/profile-2.png"),
+  privateModel(
+      name: "Emine",
+      time: "21.11.2021",
+      id: 10,
+      type: "1",
+      status: "1",
+      currentMsg: "Selam",
+      description: "a",
+      ourImagesPath: "assets/profile-3.png"),
 ];
 
 
