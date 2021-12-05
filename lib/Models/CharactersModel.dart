@@ -23,7 +23,7 @@ List<privateModel> characters = [
       id: 1,
       currentMsg: "Selam",
       description: "a",
-      ourImagesPath: "assets/profile-1.png"), /// Account
+      ourImagesPath: "assets/pokemons/pokemon11.png"), /// Account
 
   privateModel(
       name: "Ali",
@@ -33,7 +33,7 @@ List<privateModel> characters = [
       status: "0",
       currentMsg: "Hello",
       description: "My name is Ali",
-      ourImagesPath: "assets/profile-2.png"),
+      ourImagesPath: "assets/pokemons/pokemon1.png"),
   privateModel(
       name: "Hamza",
       time: "10:10",
@@ -42,8 +42,7 @@ List<privateModel> characters = [
       status: "0",
       currentMsg: "Son olarak bunu yazdım",
       description: "a",
-
-      ourImagesPath: "assets/profile-2.png"),
+      ourImagesPath: "assets/pokemons/pokemon2.png"),
   privateModel(
       name: "Mert",
       time: "Dün",
@@ -52,7 +51,7 @@ List<privateModel> characters = [
       status: "1",
       currentMsg: "Selam",
       description: "a",
-      ourImagesPath: "assets/profile-2.png"),
+      ourImagesPath: "assets/pokemons/pokemon3.png"),
   privateModel(
       name: "Ahmet",
       time: "Dün",
@@ -61,7 +60,7 @@ List<privateModel> characters = [
       status: "1",
       currentMsg: "Selam",
       description: "a",
-      ourImagesPath: "assets/profile-3.png"),
+      ourImagesPath: "assets/pokemons/pokemon4.png"),
   privateModel(
       name: "Aslan",
       time: "Dün",
@@ -70,7 +69,7 @@ List<privateModel> characters = [
       status: "2",
       currentMsg: "Selam",
       description: "a",
-      ourImagesPath: "assets/profile-3.png"),
+      ourImagesPath: "assets/pokemons/pokemon5.png"),
   privateModel(
       name: "Fatih",
       time: "Dün",
@@ -79,7 +78,7 @@ List<privateModel> characters = [
       status: "0",
       currentMsg: "Selam",
       description: "a",
-      ourImagesPath: "assets/profile-3.png"),
+      ourImagesPath: "assets/pokemons/pokemon6.png"),
   privateModel(
       name: "Fuat",
       time: "20.11.2021",
@@ -88,7 +87,7 @@ List<privateModel> characters = [
       status: "1",
       currentMsg: "Selam ben Fuat",
       description: "a",
-      ourImagesPath: "assets/profile-1.png"),
+      ourImagesPath: "assets/pokemons/pokemon7.png"),
   privateModel(
       name: "Ayşe",
       time: "21.11.2021",
@@ -97,7 +96,7 @@ List<privateModel> characters = [
       status: "2",
       currentMsg: "Selam",
       description: "a",
-      ourImagesPath: "assets/profile-2.png"),
+      ourImagesPath: "assets/pokemons/pokemon8.png"),
   privateModel(
       name: "Emine",
       time: "21.11.2021",
@@ -106,7 +105,7 @@ List<privateModel> characters = [
       status: "1",
       currentMsg: "Selam",
       description: "a",
-      ourImagesPath: "assets/profile-3.png"),
+      ourImagesPath: "assets/pokemons/pokemon9.png"),
 ];
 
 

@@ -68,6 +68,17 @@ flutter:
    - assets/profile-1.png
    - assets/profile-2.png
    - assets/profile-3.png
+   - assets/pokemons/pokemon1.png
+   - assets/pokemons/pokemon2.png
+   - assets/pokemons/pokemon3.png
+   - assets/pokemons/pokemon4.png
+   - assets/pokemons/pokemon5.png
+   - assets/pokemons/pokemon6.png
+   - assets/pokemons/pokemon7.png
+   - assets/pokemons/pokemon8.png
+   - assets/pokemons/pokemon9.png
+   - assets/pokemons/pokemon10.png
+   - assets/pokemons/pokemon11.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

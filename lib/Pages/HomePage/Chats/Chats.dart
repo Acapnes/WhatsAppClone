@@ -38,7 +38,7 @@ class _mainChatsState extends State<mainChats> {
                     subtitle: subTitle(i),
                       leading: IconButton(
                         icon: CircleAvatar(
-                          backgroundImage: AssetImage("assets/logo.png"),),
+                          backgroundImage: AssetImage(characters[i].ourImagesPath,)),
                         onPressed: (){
                           _showAlertDialogAvatar(i);
                       },),
