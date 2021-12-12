@@ -44,6 +44,9 @@ dev_dependencies:
   country_picker:
   image_picker:
   camera: ^0.9.4+5
+  just_audio: ^0.9.7
+  record: ^3.0.0
+  permission_handler: ^8.3.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

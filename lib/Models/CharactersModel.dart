@@ -106,6 +106,24 @@ List<privateModel> characters = [
       currentMsg: "Selam",
       description: "a",
       ourImagesPath: "assets/pokemons/pokemon9.png"),
+  privateModel(
+      name: "Fikret",
+      time: "21.11.2021",
+      id: 10,
+      type: "1",
+      status: "1",
+      currentMsg: "Selam",
+      description: "a",
+      ourImagesPath: "assets/pokemons/pokemon10.png"),
+  privateModel(
+      name: "Mustafa",
+      time: "21.11.2021",
+      id: 10,
+      type: "1",
+      status: "1",
+      currentMsg: "Selam",
+      description: "a",
+      ourImagesPath: "assets/pokemons/pokemon11.png"),
 ];
 
 

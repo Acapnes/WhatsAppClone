@@ -5,6 +5,7 @@ import 'package:whatsapp_clone/Controllers/PopUpMenus/StatusPopup.dart';
 import 'package:whatsapp_clone/Pages/HomePage/Calls.dart';
 import 'package:whatsapp_clone/Pages/HomePage/Camera.dart';
 import 'package:whatsapp_clone/Pages/HomePage/Chats/Chats.dart';
+import 'package:whatsapp_clone/Pages/HomePage/Chats/selectionFAB.dart';
 import 'package:whatsapp_clone/Pages/HomePage/Status.dart';
 import 'package:whatsapp_clone/Pages/Profile-Settings/Settings.dart';
 import 'package:whatsapp_clone/globals.dart';
@@ -106,13 +107,20 @@ class _mainHomeState extends State<mainHome>
         break;
       case 1:
         return FloatingActionButton(
-            shape: StadiumBorder(),
-            onPressed: null,
-            backgroundColor: Colors.green,
-            child: Icon(
-              Icons.message,
-              size: 20.0,
-            ));
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        mainSelectionFAB()));
+          },
+          shape: StadiumBorder(),
+          backgroundColor: Colors.green,
+          child: Icon(
+            Icons.message,
+            size: 20.0,
+          ),
+        );
         break;
       case 2:
         return Container(
