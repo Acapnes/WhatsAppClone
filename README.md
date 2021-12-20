@@ -10,6 +10,16 @@ This project was developed with Flutter.
 
 ![](assets/readme/calls.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2- Status Screen
+
+![](assets/readme/status.png)
+
+3- Status Screen
+
+![](assets/readme/calls.png)
+
+4- Status Screen
+
+![](assets/readme/photo.png)
+
+
