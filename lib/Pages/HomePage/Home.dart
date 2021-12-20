@@ -164,7 +164,9 @@ class _mainHomeState extends State<mainHome>
                       size: 25.0,
                       color: Colors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      getImage();
+                    },
                   )),
             ],
           ),

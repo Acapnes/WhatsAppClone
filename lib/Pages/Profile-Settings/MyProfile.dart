@@ -64,7 +64,7 @@ class _mainMyProfileState extends State<mainMyProfile> {
                 child: Container(
                   margin: EdgeInsets.only(left: 10),
                   child: ListTile(
-                    title: Text("Bildirimler"),
+                    title: Text("Ad"),
                     subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
                     leading: Icon(Icons.details),
                   ),

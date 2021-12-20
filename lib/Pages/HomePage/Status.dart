@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/CustomUI/StatusUI/myStatus.dart';
 import 'package:whatsapp_clone/Models/CharactersModel.dart';
 import 'package:whatsapp_clone/Pages/HomePage/Camera.dart';
 import 'package:whatsapp_clone/globals.dart';
@@ -28,9 +29,16 @@ class _mainStatusState extends State<mainStatus> {
                         getImage();
                       },
                       child: ListTile(
-                        leading: CircleAvatar(backgroundImage: AssetImage("assets/logo.png"),),
-                        title: Text("Durumum"),
-                        subtitle: Text("Durum güncellemesi eklemek için dokunun"),
+                        leading: GestureDetector(
+                          onTap: (){
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (builder) => mainMyStatus("assets/background.png")));
+                          },
+                            child: CircleAvatar(backgroundImage: AssetImage("assets/logo.png"),)),
+                        title: Text("Status"),
+                        subtitle: Text("Tap to add status update"),
                       ),
                     ),
                   ),
@@ -38,7 +46,7 @@ class _mainStatusState extends State<mainStatus> {
                     margin: EdgeInsets.only(left: 10,top: 10),
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Text("Son güncellemeler"),
+                      child: Text("Latest updates"),
                     ),
                   ),
                 ],

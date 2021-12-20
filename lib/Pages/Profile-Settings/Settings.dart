@@ -23,18 +23,15 @@ class _mainSettingsState extends State<mainSettings> {
           children: [
             Material(
               child: InkWell(
-                onTap: (){},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => mainMyProfile()));
+                },
                 child: ListTile(
                     title: Text(characters[0].name),
                     subtitle: Text(characters[0].description),
-                    leading: IconButton(
-                      icon: CircleAvatar(
-                        backgroundImage: AssetImage("assets/logo.png"),
-                      ),
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => mainMyProfile()));
-                      },
+                    leading: CircleAvatar(
+                      backgroundImage: AssetImage("assets/logo.png"),radius: 30,
                     ),
                     trailing: IconButton(
                       icon: Icon(Icons.qr_code),
@@ -45,22 +42,22 @@ class _mainSettingsState extends State<mainSettings> {
                     )),
               ),
             ),
-             Material(
-               child: InkWell(
-                 onTap: (){},
-                 child: Container(
-                    margin: EdgeInsets.only(left: 10),
-                    child: ListTile(
-                      title: Text("Hesap"),
-                      subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
-                      leading: Icon(Icons.details),
-                    ),
-                  ),
-               ),
-             ),
             Material(
               child: InkWell(
-                onTap: (){},
+                onTap: () {},
+                child: Container(
+                  margin: EdgeInsets.only(left: 10),
+                  child: ListTile(
+                    title: Text("Hesap"),
+                    subtitle: Text("Gizlilik, güvenlik, numara değiştir"),
+                    leading: Icon(Icons.details),
+                  ),
+                ),
+              ),
+            ),
+            Material(
+              child: InkWell(
+                onTap: () {},
                 child: Container(
                   margin: EdgeInsets.only(left: 10),
                   child: ListTile(
@@ -73,7 +70,7 @@ class _mainSettingsState extends State<mainSettings> {
             ),
             Material(
               child: InkWell(
-                onTap: (){},
+                onTap: () {},
                 child: Container(
                   margin: EdgeInsets.only(left: 10),
                   child: ListTile(
@@ -86,7 +83,7 @@ class _mainSettingsState extends State<mainSettings> {
             ),
             Material(
               child: InkWell(
-                onTap: (){},
+                onTap: () {},
                 child: Container(
                   margin: EdgeInsets.only(left: 10),
                   child: ListTile(
@@ -99,7 +96,7 @@ class _mainSettingsState extends State<mainSettings> {
             ),
             Material(
               child: InkWell(
-                onTap: (){},
+                onTap: () {},
                 child: Container(
                   margin: EdgeInsets.only(left: 10),
                   child: ListTile(
@@ -112,7 +109,7 @@ class _mainSettingsState extends State<mainSettings> {
             ),
             Material(
               child: InkWell(
-                onTap: (){},
+                onTap: () {},
                 child: Container(
                   margin: EdgeInsets.only(left: 10),
                   child: ListTile(

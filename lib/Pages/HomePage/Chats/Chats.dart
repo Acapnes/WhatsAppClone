@@ -146,7 +146,7 @@ class _mainChatsState extends State<mainChats> {
               children: [
                 Icon(Icons.error_outline,size: 16,color: Colors.red,),
                 SizedBox(width: 3),
-                Text("Mesaj yüklenemedi",style: TextStyle(color: Colors.redAccent),),
+                Text("Error",style: TextStyle(color: Colors.redAccent),),
               ],
             );
             break;
@@ -215,7 +215,7 @@ class _mainChatsState extends State<mainChats> {
           children: [
             Icon(Icons.photo_album,size: 16,),
             SizedBox(width: 3),
-            Text("Fotoğraf"),
+            Text("Photo"),
           ],
         );
         break;

@@ -82,6 +82,10 @@ flutter:
    - assets/pokemons/pokemon9.png
    - assets/pokemons/pokemon10.png
    - assets/pokemons/pokemon11.png
+   - assets/readme/calls.png
+   - assets/readme/chats.png
+   - assets/readme/photo.png
+   - assets/readme/status.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
