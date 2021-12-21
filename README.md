@@ -6,20 +6,19 @@ WhatsApp clone by Acapnes.
 
 This project was developed with Flutter.
 
-## Screens
-###1- Chats Screen
+##1- Chats Screen
 
 ![](assets/readme/chats.png)
 
-###2- Status Screen
+##2- Status Screen
 
 ![](assets/readme/status.png)
 
-###3- Status Screen
+##3- Status Screen
 
 ![](assets/readme/calls.png)
 
-###4- Status Screen
+##4- Status Screen
 
 ![](assets/readme/photo.png)
 
