@@ -1,11 +1,6 @@
 # whatsapp_clone
 
-WhatsApp clone by Acapnes.
-Written by Flutter
-
-## Getting Started
-
-This project was developed with Flutter.
+Implemented using Flutter, this project focuses on frontend development to faithfully replicate the core features and user interface of the original WhatsApp messaging platform.
 
 ## Chats Screen
 
